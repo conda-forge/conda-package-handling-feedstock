@@ -37,7 +37,7 @@ test:
     - pytest
     - pytest-cov
   commands:
-    - pytest tests
+    - pytest --pyargs tests
 
 about:
   home: https://github.com/conda/conda-package-handling
