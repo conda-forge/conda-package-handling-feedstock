@@ -24,6 +24,7 @@ requirements:
     - python
     - pip
   run:
+    - futures   # [py27]
     - libarchive >=3.3.3
     - python
     - python-libarchive-c
