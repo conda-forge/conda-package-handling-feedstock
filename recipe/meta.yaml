@@ -35,6 +35,7 @@ test:
   source_files:
     - tests
   requires:
+    - mock
     - pytest
     - pytest-cov
     - pytest-mock
