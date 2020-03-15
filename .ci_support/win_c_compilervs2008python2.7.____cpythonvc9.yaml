@@ -1,5 +1,5 @@
 c_compiler:
-- vs2015
+- vs2008
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -11,10 +11,10 @@ pin_run_as_build:
   vc:
     max_pin: x
 python:
-- '3.6'
+- 2.7.* *_cpython
 vc:
-- '14'
+- '9'
 zip_keys:
-- - python
+- - c_compiler
+  - python
   - vc
-  - c_compiler
