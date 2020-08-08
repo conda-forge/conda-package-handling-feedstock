@@ -82,7 +82,7 @@ outputs:
         - automake    # [unix]
         - libtool     # [unix]
         - pkg-config  # [unix]
-        - cmake       # [win]
+        - cmake
         - make        # [unix]
         - m2-patch    # [win]
         - jom         # [win]
