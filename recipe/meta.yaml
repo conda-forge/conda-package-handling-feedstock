@@ -164,6 +164,14 @@ outputs:
 about:
   home: https://github.com/conda/conda-package-handling
   license: BSD-3-Clause
+  license_file:
+    - cph/LICENSE
+    - static_deps_licenses/bzip2.txt
+    - static_deps_licenses/libarchive.txt
+    - static_deps_licenses/zlib.txt
+    - static_deps_licenses/zstd.txt
+    - static_deps_licenses/msinttypes.txt  # [win and py27]
+    - static_deps_licenses/libiconv.txt    # [osx]
   summary: Create and extract conda packages of various formats
 
 extra:
