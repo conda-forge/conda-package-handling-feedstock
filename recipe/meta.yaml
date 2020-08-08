@@ -23,7 +23,7 @@ source:
     sha256: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
     folder: bzip2
     patches:
-      - bzip2-pathes/0001-cross.patch
+      - bzip2-patches/0001-cross.patch
 
   - url: https://github.com/libarchive/libarchive/releases/download/v{{ libarchive_version }}/libarchive-{{ libarchive_version }}.tar.gz
     sha256: ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e
