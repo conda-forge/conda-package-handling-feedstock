@@ -1,3 +1,5 @@
+bzip2:
+- '1'
 c_compiler:
 - gcc
 c_compiler_version:
@@ -8,11 +10,28 @@ channel_targets:
 - conda-forge main
 docker_image:
 - condaforge/linux-anvil-ppc64le
+libarchive:
+- '3.3'
+libiconv:
+- '1.15'
 pin_run_as_build:
+  bzip2:
+    max_pin: x
+  libiconv:
+    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
+  zlib:
+    max_pin: x.x
 python:
+- 3.6.* *_73_pypy
 - 3.6.* *_cpython
+- 3.7.* *_cpython
+- 3.8.* *_cpython
 target_platform:
 - linux-ppc64le
+zlib:
+- '1.2'
+zstd:
+- '1.4'
