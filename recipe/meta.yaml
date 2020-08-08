@@ -74,7 +74,8 @@ outputs:
         - bzip2
         - libiconv    # [osx]
         - zlib
-        - zstd-static
+        - zstd-static  # [unix]
+        - ztsd         # [win]
 
     test:
       commands:
