@@ -62,6 +62,7 @@ outputs:
         # we manually convert C99 to C89 instead.
         # - c99-to-c89  # [win and vc<14]
         - msinttypes  # [win]
+        - ninja       # [win]
         - autoconf    # [unix]
         - automake    # [unix]
         - libtool     # [unix]
