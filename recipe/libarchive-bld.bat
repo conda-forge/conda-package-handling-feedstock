@@ -9,6 +9,10 @@ pushd bzip2
 call %RECIPE_DIR%\bzip2-bld.bat %exit_on_error%
 popd
 
+pushd zstd
+call %RECIPE_DIR%\zstd-bld.bat %exit_on_error%
+popd
+
 pushd libarchive
 
 :: Needed so we can find stdint.h from msinttypes.

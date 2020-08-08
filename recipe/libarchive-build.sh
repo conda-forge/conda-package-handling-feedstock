@@ -9,6 +9,11 @@ pushd bzip2
 . ${RECIPE_DIR}/bzip2-build.sh
 popd
 
+pushd zstd
+. ${RECIPE_DIR}/zstd-build.sh
+popd
+
+
 pushd libarchive
 
 # Build libarchive as a static library with support for the features needed for
