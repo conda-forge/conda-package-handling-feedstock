@@ -3,6 +3,7 @@
 {% set libarchive_version = "3.3.3" %}
 # 3.4.0 breaks some symlink stuff on macos.  Holding back for now.
 
+{% set zlib_version = "1.2.11" %}
 
 package:
   name: conda-package-handling-build
@@ -12,6 +13,10 @@ source:
   - url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
     sha256: 56fba119552f1796df5bdd21fa11c03cc2b2fcd489d1cfb2f57ad9c8d7ed9c88
     folder: cph
+
+  - url: http://zlib.net/zlib-{{ zlib_version }}.tar.gz
+    sha256: c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1
+    folder: zlib
 
   - url: https://github.com/libarchive/libarchive/releases/download/v{{ libarchive_version }}/libarchive-{{ libarchive_version }}.tar.gz
     sha256: ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e
@@ -45,7 +50,6 @@ outputs:
     script: libarchive-build.sh  # [unix]
     script: libarchive-bld.bat   # [win]
     build:
-      number: 3
       ignore_run_exports:
         - bzip2
         - libiconv
@@ -74,7 +78,7 @@ outputs:
         - msinttypes  # [win and vc<14]
         - bzip2
         - libiconv    # [osx]
-        - zlib
+        - zlib        # [win]
         # on win + vc9 a zstd package with a static library is needed,
         # defaults has one but conda-forge does not (yet).  Use the default
         # package by specifying the full version and build string
@@ -110,7 +114,8 @@ outputs:
 
   - name: conda-package-handling
     version: {{ version }}
-    script: cph-build.sh
+    script: cph-build.sh  # [unix]
+    script: cph-bld.bat   # [win]
     build:
       entry_points:
         - cph = conda_package_handling.cli:main

@@ -1,6 +1,12 @@
 #!/bin/bash
 set -ex
 
+pushd zlib
+
+. ${RECIPE_DIR}/zlib-build.sh
+
+popd
+
 pushd libarchive
 
 # Build libarchive as a static library with support for the features needed for
