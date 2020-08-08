@@ -2,9 +2,11 @@
 set -ex
 
 pushd zlib
-
 . ${RECIPE_DIR}/zlib-build.sh
+popd
 
+pushd bzip2
+. ${RECIPE_DIR}/bzip2-build.sh
 popd
 
 pushd libarchive

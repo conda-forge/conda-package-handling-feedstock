@@ -4,6 +4,7 @@
 # 3.4.0 breaks some symlink stuff on macos.  Holding back for now.
 
 {% set zlib_version = "1.2.11" %}
+{% set bzip2_version = "1.0.8" %}
 
 package:
   name: conda-package-handling-build
@@ -17,6 +18,12 @@ source:
   - url: http://zlib.net/zlib-{{ zlib_version }}.tar.gz
     sha256: c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1
     folder: zlib
+
+  - url: https://sourceware.org/pub/bzip2/bzip2-{{ bzip2_version }}.tar.gz
+    sha256: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+    folder: bzip2
+    patches:
+      - bzip2-pathes/0001-cross.patch
 
   - url: https://github.com/libarchive/libarchive/releases/download/v{{ libarchive_version }}/libarchive-{{ libarchive_version }}.tar.gz
     sha256: ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e
@@ -63,10 +70,6 @@ outputs:
     requirements:
       build:
         - {{ compiler('c') }}
-        # Does not work in this recips at present
-        # we manually convert C99 to C89 instead.
-        # - c99-to-c89  # [win and vc<14]
-        - msinttypes  # [win and vc<14]
         - autoconf    # [unix]
         - automake    # [unix]
         - libtool     # [unix]
@@ -74,16 +77,10 @@ outputs:
         - cmake       # [win]
         - make        # [unix]
         - m2-patch    # [win]
+        - jom         # [win]
       host:
-        - msinttypes  # [win and vc<14]
-        - bzip2
         - libiconv    # [osx]
-        - zlib        # [win]
-        # on win + vc9 a zstd package with a static library is needed,
-        # defaults has one but conda-forge does not (yet).  Use the default
-        # package by specifying the full version and build string
-        - zstd 1.3.7 h1b0e4d7_0  # [win and vc<14]
-        - zstd                   # [not ((win and vc<14) or unix)]
+        - zstd                   # [not unix]
         - zstd-static            # [unix]
 
     test:

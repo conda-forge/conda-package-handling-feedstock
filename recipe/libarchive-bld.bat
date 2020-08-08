@@ -1,6 +1,14 @@
 @echo on
 set "exit_on_error=|| exit /b 1"
 
+pushd zlib
+call %RECIPE_DIR%\zlib-bld.bat %exit_on_error%
+popd
+
+pushd bzip2
+call %RECIPE_DIR%\bzip2-bld.bat %exit_on_error%
+popd
+
 pushd libarchive
 
 :: Needed so we can find stdint.h from msinttypes.
