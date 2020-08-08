@@ -11,7 +11,7 @@ cmake -G "NMake Makefiles" ^
 if errorlevel 1 exit 1
 
 :: Build.
-cmake --build %SRC_DIR% --target INSTALL --config Release
+cmake --build . --target INSTALL --config Release
 if errorlevel 1 exit 1
 
 :: Test.
