@@ -13,7 +13,7 @@ source:
     sha256: 56fba119552f1796df5bdd21fa11c03cc2b2fcd489d1cfb2f57ad9c8d7ed9c88
     folder: cph
 
-  - url: https://github.com/libarchive/libarchive/releases/download/v{{ version }}/libarchive-{{ version }}.tar.gz
+  - url: https://github.com/libarchive/libarchive/releases/download/v{{ libarchive_version }}/libarchive-{{ libarchive_version }}.tar.gz
     sha256: ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e
     patches:
       - patches/0001-Add-lib-to-CMAKE_FIND_LIBRARY_PREFIXES-for-lzma.patch
