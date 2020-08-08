@@ -26,7 +26,7 @@ source:
     patches:
       - bzip2-patches/0001-cross.patch
 
-  - url: https://github.com/facebook/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
+  - url: https://github.com/facebook/zstd/releases/download/v{{ zstd_version }}/zstd-{{ zstd_version }}.tar.gz
     sha256: 98e91c7c6bf162bf90e4e70fdbc41a8188b9fa8de5ad840c401198014406ce9e
     folder: zstd
     patches:
