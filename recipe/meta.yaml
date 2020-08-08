@@ -75,7 +75,7 @@ outputs:
         - libiconv    # [osx]
         - zlib
         - zstd-static  # [unix]
-        - ztsd         # [win]
+        - zstd         # [win]
 
     test:
       commands:
