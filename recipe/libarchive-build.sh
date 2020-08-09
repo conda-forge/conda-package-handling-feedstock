@@ -1,6 +1,10 @@
 #!/bin/bash
 set -ex
 
+pushd xz
+. ${RECIPE_DIR}/xz-build.sh
+popd
+
 pushd zlib
 . ${RECIPE_DIR}/zlib-build.sh
 popd

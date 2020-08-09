@@ -6,6 +6,7 @@
 {% set zlib_version = "1.2.11" %}
 {% set bzip2_version = "1.0.8" %}
 {% set zstd_version = "1.4.5" %}
+{% set xz_version = "5.2.5" %}
 
 package:
   name: conda-package-handling-build
@@ -31,6 +32,13 @@ source:
     folder: zstd
     patches:
       - zstd-patches/utime-aarch64.patch  # [aarch64]
+
+  - url: http://downloads.sourceforge.net/project/lzmautils/xz-{{ xz_version }}.tar.bz2
+    sha256: 5117f930900b341493827d63aa910ff5e011e0b994197c3b71c08a20228a42df
+    folder: xz
+    patches:
+      - xz-patches/0001-Add-vs2008-support-via-cmake.patch
+      - xz-patches/0002-Add-gettimeofday-for-VS2008.patch
 
   - url: https://github.com/libarchive/libarchive/releases/download/v{{ libarchive_version }}/libarchive-{{ libarchive_version }}.tar.gz
     sha256: ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e
@@ -115,8 +123,11 @@ outputs:
         - static_deps_licenses/libarchive.txt
         - static_deps_licenses/zlib.txt
         - static_deps_licenses/zstd.txt
-        - static_deps_licenses/msinttypes.txt  # [win and py27]
         - static_deps_licenses/libiconv.txt    # [osx]
+        - xz/COPYING
+        - xz/COPYING.GPLv2
+        - xz/COPYING.GPLv3
+        - xz/COPYING.LGPLv2.1
 
   - name: conda-package-handling
     version: {{ version }}
@@ -170,8 +181,11 @@ outputs:
         - static_deps_licenses/libarchive.txt
         - static_deps_licenses/zlib.txt
         - static_deps_licenses/zstd.txt
-        - static_deps_licenses/msinttypes.txt  # [win and py27]
         - static_deps_licenses/libiconv.txt    # [osx]
+        - xz/COPYING
+        - xz/COPYING.GPLv2
+        - xz/COPYING.GPLv3
+        - xz/COPYING.LGPLv2.1
       summary: Create and extract conda packages of various formats
 
 about:
@@ -184,8 +198,11 @@ about:
     - static_deps_licenses/libarchive.txt
     - static_deps_licenses/zlib.txt
     - static_deps_licenses/zstd.txt
-    - static_deps_licenses/msinttypes.txt  # [win and py27]
     - static_deps_licenses/libiconv.txt    # [osx]
+    - xz/COPYING
+    - xz/COPYING.GPLv2
+    - xz/COPYING.GPLv3
+    - xz/COPYING.LGPLv2.1
   summary: Create and extract conda packages of various formats
 
 extra:

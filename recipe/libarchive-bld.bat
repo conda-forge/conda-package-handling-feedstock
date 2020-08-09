@@ -1,6 +1,10 @@
 @echo on
 set "exit_on_error=|| exit /b 1"
 
+pushd xz
+call %RECIPE_DIR%\xz-bld.bat %exit_on_error%
+popd
+
 pushd zlib
 call %RECIPE_DIR%\zlib-bld.bat %exit_on_error%
 popd
