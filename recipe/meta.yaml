@@ -79,6 +79,27 @@ source:
 
 build:
   number: 4
+  # HACK: case-sensitive mismatch in latest conda-build
+  missing_dso_whitelist:
+    - Library/bin/VCRUNTIME140.dll    # [win]
+    - "*/MSVCR90.dll"                 # [win]
+    - "MSVCR90.dll"                   # [win]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - autoconf    # [unix]
+    - automake    # [unix]
+    - libtool     # [unix]
+    - pkg-config  # [unix]
+    - cmake
+    - make        # [unix]
+    - m2-patch    # [win]
+    - patch       # [unix]
+    - jom         # [win]
+    - ninja       # [win]
+    - m2-gcc-libs  # [win]
 
 outputs:
   # Recipe for a static libarchive with support for the features needed for
@@ -86,32 +107,23 @@ outputs:
   # This is not a general purpose libarchive
   - name: _libarchive_static_for_cph
     version: {{ libarchive_version }}
-    script: libarchive-build.sh  # [unix]
-    script: libarchive-bld.bat   # [win]
+    files:
+      - include/archive.h                 # [unix]
+      - include/archive_entry.h           # [unix]
+      - lib/libarchive.a                  # [unix]
+      - lib/libarchive_and_deps.a         # [unix]
+      - lib/pkgconfig/libarchive.pc       # [unix]
+      - Library\include\archive.h            # [win]
+      - Library\include\archive_entry.h      # [win]
+      - Library\lib\archive_static.lib       # [win]
+      - Library\lib\archive_and_deps.lib     # [win]
+      - Library\lib\pkgconfig\libarchive.pc  # [win]
     build:
-      ignore_run_exports:
-        - libiconv
       # HACK: case-sensitive mismatch in latest conda-build
       missing_dso_whitelist:
         - Library/bin/VCRUNTIME140.dll    # [win]
         - "*/MSVCR90.dll"                 # [win]
         - "MSVCR90.dll"                   # [win]
-    requirements:
-      build:
-        - {{ compiler('c') }}
-        - {{ compiler('cxx') }}
-        - autoconf    # [unix]
-        - automake    # [unix]
-        - libtool     # [unix]
-        - pkg-config  # [unix]
-        - cmake
-        - make        # [unix]
-        - m2-patch    # [win]
-        - patch       # [unix]
-        - jom         # [win]
-        - ninja       # [win]
-        - m2-gcc-libs  # [win]
-
     test:
       commands:
         # Verify headers are in place.
