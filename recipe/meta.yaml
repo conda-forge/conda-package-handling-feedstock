@@ -97,7 +97,6 @@ outputs:
         - ninja       # [win]
       host:
         - libiconv    # [osx]
-        - xz
         - lz4-c
 
     test:
