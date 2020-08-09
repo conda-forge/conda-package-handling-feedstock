@@ -85,10 +85,7 @@ outputs:
     script: libarchive-bld.bat   # [win]
     build:
       ignore_run_exports:
-        - bzip2
         - libiconv
-        - zlib
-        - zstd
       # HACK: case-sensitive mismatch in latest conda-build
       missing_dso_whitelist:
         - Library/bin/VCRUNTIME140.dll    # [win]
@@ -162,7 +159,6 @@ outputs:
         - pip
         - cython
         - {{ pin_subpackage('_libarchive_static_for_cph', exact=True) }}
-        - msinttypes  # [win and vc<14]
       run:
         - futures   # [py27]
         - python
