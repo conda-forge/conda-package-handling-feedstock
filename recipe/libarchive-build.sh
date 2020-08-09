@@ -5,6 +5,10 @@ pushd xz
 . ${RECIPE_DIR}/xz-build.sh
 popd
 
+pushd lz4_c
+. ${RECIPE_DIR}/lz4-c-build.sh
+popd
+
 pushd zlib
 . ${RECIPE_DIR}/zlib-build.sh
 popd

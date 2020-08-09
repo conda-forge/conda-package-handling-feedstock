@@ -7,6 +7,7 @@
 {% set bzip2_version = "1.0.8" %}
 {% set zstd_version = "1.4.5" %}
 {% set xz_version = "5.2.5" %}
+{% set lz4_c_version = "1.9.2" %}
 
 package:
   name: conda-package-handling-build
@@ -39,6 +40,17 @@ source:
     patches:
       - xz-patches/0001-Add-vs2008-support-via-cmake.patch
       - xz-patches/0002-Add-gettimeofday-for-VS2008.patch
+
+  - url: https://github.com/lz4/lz4/archive/v{{ lz4_c_version }}.tar.gz
+    sha256: 658ba6191fa44c92280d4aa2c271b0f4fbc0e34d249578dd05e50e76d0e5efcc
+    folder: lz4_c
+    patches:
+      # Split into 2 patches due to a bug in conda-build
+      # - lz4-c-patches/0001-Add-WindowsTargetPlatformVersion-of-10.0-and-lz4-exe.patch
+      - lz4-c-patches/0001-Add-WindowsTargetPlatformVersion-of-10.0-and-lz4-exe.1.patch
+      - lz4-c-patches/0001-Add-WindowsTargetPlatformVersion-of-10.0-and-lz4-exe.2.patch
+      # fullbench build used to cause "an internal compiler error".
+      # - lz4-c-patches/0002-Do-not-build-tests-binaries-on-VS-project.patch  # [win]
 
   - url: https://github.com/libarchive/libarchive/releases/download/v{{ libarchive_version }}/libarchive-{{ libarchive_version }}.tar.gz
     sha256: ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e
@@ -93,11 +105,12 @@ outputs:
         - cmake
         - make        # [unix]
         - m2-patch    # [win]
+        - patch       # [unix]
         - jom         # [win]
         - ninja       # [win]
+        - m2-gcc-libs  # [win]
       host:
         - libiconv    # [osx]
-        - lz4-c
 
     test:
       commands:
@@ -127,6 +140,7 @@ outputs:
         - xz/COPYING.GPLv2
         - xz/COPYING.GPLv3
         - xz/COPYING.LGPLv2.1
+        - lz4_c/lib/LICENSE
 
   - name: conda-package-handling
     version: {{ version }}
@@ -185,6 +199,7 @@ outputs:
         - xz/COPYING.GPLv2
         - xz/COPYING.GPLv3
         - xz/COPYING.LGPLv2.1
+        - lz4_c/lib/LICENSE
       summary: Create and extract conda packages of various formats
 
 about:
@@ -202,6 +217,7 @@ about:
     - xz/COPYING.GPLv2
     - xz/COPYING.GPLv3
     - xz/COPYING.LGPLv2.1
+    - lz4_c/lib/LICENSE
   summary: Create and extract conda packages of various formats
 
 extra:

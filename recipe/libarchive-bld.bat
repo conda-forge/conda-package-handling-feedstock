@@ -5,6 +5,10 @@ pushd xz
 call %RECIPE_DIR%\xz-bld.bat %exit_on_error%
 popd
 
+pushd lz4_c
+call %RECIPE_DIR%\lz4-c-bld.bat %exit_on_error%
+popd
+
 pushd zlib
 call %RECIPE_DIR%\zlib-bld.bat %exit_on_error%
 popd
