@@ -22,15 +22,11 @@ docker_image:
 - condaforge/linux-anvil-aarch64
 libarchive:
 - '3.3'
-libiconv:
-- '1.15'
 lz4_c:
 - 1.9.2
 pin_run_as_build:
   bzip2:
     max_pin: x
-  libiconv:
-    max_pin: x.x
   lz4-c:
     max_pin: x.x.x
   python:
