@@ -1,6 +1,12 @@
 #!/bin/bash
 set -ex
 
+if [[ ${HOST} =~ .*darwin.* ]]; then
+    pushd libiconv
+    . ${RECIPE_DIR}/libiconv-build.sh
+    popd
+fi
+
 pushd xz
 . ${RECIPE_DIR}/xz-build.sh
 popd

@@ -8,6 +8,7 @@
 {% set zstd_version = "1.4.5" %}
 {% set xz_version = "5.2.5" %}
 {% set lz4_c_version = "1.9.2" %}
+{% set libiconv_version = "1.15" %}  # [osx]
 
 package:
   name: conda-package-handling-build
@@ -51,6 +52,10 @@ source:
       - lz4-c-patches/0001-Add-WindowsTargetPlatformVersion-of-10.0-and-lz4-exe.2.patch
       # fullbench build used to cause "an internal compiler error".
       # - lz4-c-patches/0002-Do-not-build-tests-binaries-on-VS-project.patch  # [win]
+
+  - url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-{{ libiconv_version }}.tar.gz  # [osx]
+    sha256: ccf536620a45458d26ba83887a983b96827001e92a13847b45e4925cc8913178         # [osx]
+    folder: libiconv                                                                 # [osx]
 
   - url: https://github.com/libarchive/libarchive/releases/download/v{{ libarchive_version }}/libarchive-{{ libarchive_version }}.tar.gz
     sha256: ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e
@@ -106,8 +111,6 @@ outputs:
         - jom         # [win]
         - ninja       # [win]
         - m2-gcc-libs  # [win]
-      host:
-        - libiconv    # [osx]
 
     test:
       commands:
