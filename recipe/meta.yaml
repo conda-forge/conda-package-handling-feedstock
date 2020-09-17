@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: 56fba119552f1796df5bdd21fa11c03cc2b2fcd489d1cfb2f57ad9c8d7ed9c88
+  sha256: aa8719b23d5064182aed3f15a27879ca6fd4c1a8bb7f2048b26d2ae425288bd8
 
 build:
   number: 5
