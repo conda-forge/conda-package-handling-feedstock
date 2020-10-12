@@ -5,11 +5,9 @@ Home: https://github.com/conda/conda-package-handling
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-package-handling-feedstock/blob/master/LICENSE.txt)
 
 Summary: Create and extract conda packages of various formats
-
-
 
 Current build status
 ====================
@@ -43,122 +41,157 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.6.____73_pypytarget_platformlinux-64</td>
+              <td>linux_64_c_compiler_version7python3.6.____73_pypytarget_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.6.____73_pypytarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7python3.6.____73_pypytarget_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.6.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_c_compiler_version7python3.6.____cpythontarget_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7python3.6.____cpythontarget_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.7.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_c_compiler_version7python3.7.____cpythontarget_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7python3.7.____cpythontarget_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.8.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_c_compiler_version7python3.8.____cpythontarget_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7python3.8.____cpythontarget_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_python3.6.____73_pypytarget_platformlinux-aarch64</td>
+              <td>linux_64_c_compiler_version7python3.9.____cpythontarget_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.6.____73_pypytarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7python3.9.____cpythontarget_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_python3.6.____cpythontarget_platformlinux-aarch64</td>
+              <td>linux_aarch64_c_compiler_version7python3.6.____73_pypytarget_platformlinux-aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.6.____cpythontarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version7python3.6.____73_pypytarget_platformlinux-aarch64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_python3.7.____cpythontarget_platformlinux-aarch64</td>
+              <td>linux_aarch64_c_compiler_version7python3.6.____cpythontarget_platformlinux-aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.7.____cpythontarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version7python3.6.____cpythontarget_platformlinux-aarch64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_python3.8.____cpythontarget_platformlinux-aarch64</td>
+              <td>linux_aarch64_c_compiler_version7python3.7.____cpythontarget_platformlinux-aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_python3.8.____cpythontarget_platformlinux-aarch64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version7python3.7.____cpythontarget_platformlinux-aarch64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_python3.6.____73_pypytarget_platformlinux-ppc64le</td>
+              <td>linux_aarch64_c_compiler_version7python3.8.____cpythontarget_platformlinux-aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_python3.6.____73_pypytarget_platformlinux-ppc64le" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version7python3.8.____cpythontarget_platformlinux-aarch64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_python3.6.____cpythontarget_platformlinux-ppc64le</td>
+              <td>linux_aarch64_c_compiler_version7python3.9.____cpythontarget_platformlinux-aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_python3.6.____cpythontarget_platformlinux-ppc64le" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_c_compiler_version7python3.9.____cpythontarget_platformlinux-aarch64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_python3.7.____cpythontarget_platformlinux-ppc64le</td>
+              <td>linux_ppc64le_c_compiler_version8python3.6.____73_pypytarget_platformlinux-ppc64le</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_python3.7.____cpythontarget_platformlinux-ppc64le" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version8python3.6.____73_pypytarget_platformlinux-ppc64le" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_python3.8.____cpythontarget_platformlinux-ppc64le</td>
+              <td>linux_ppc64le_c_compiler_version8python3.6.____cpythontarget_platformlinux-ppc64le</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_python3.8.____cpythontarget_platformlinux-ppc64le" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version8python3.6.____cpythontarget_platformlinux-ppc64le" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.6.____73_pypytarget_platformosx-64</td>
+              <td>linux_ppc64le_c_compiler_version8python3.7.____cpythontarget_platformlinux-ppc64le</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.6.____73_pypytarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version8python3.7.____cpythontarget_platformlinux-ppc64le" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.6.____cpythontarget_platformosx-64</td>
+              <td>linux_ppc64le_c_compiler_version8python3.8.____cpythontarget_platformlinux-ppc64le</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.6.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version8python3.8.____cpythontarget_platformlinux-ppc64le" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.7.____cpythontarget_platformosx-64</td>
+              <td>linux_ppc64le_c_compiler_version8python3.9.____cpythontarget_platformlinux-ppc64le</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.7.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_c_compiler_version8python3.9.____cpythontarget_platformlinux-ppc64le" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.8.____cpythontarget_platformosx-64</td>
+              <td>osx_64_c_compiler_version10python3.6.____73_pypytarget_platformosx-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.8.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10python3.6.____73_pypytarget_platformosx-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_target_platformosx-arm64</td>
+              <td>osx_64_c_compiler_version10python3.6.____cpythontarget_platformosx-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_target_platformosx-arm64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10python3.6.____cpythontarget_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_c_compiler_version10python3.7.____cpythontarget_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10python3.7.____cpythontarget_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_c_compiler_version10python3.8.____cpythontarget_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10python3.8.____cpythontarget_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_c_compiler_version10python3.9.____cpythontarget_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_64_c_compiler_version10python3.9.____cpythontarget_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_c_compiler_version11python3.8.____cpythontarget_platformosx-arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_c_compiler_version11python3.8.____cpythontarget_platformosx-arm64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_c_compiler_version11python3.9.____cpythontarget_platformosx-arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_c_compiler_version11python3.9.____cpythontarget_platformosx-arm64" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -180,6 +213,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=win&configuration=win_64_python3.8.____cpythontarget_platformwin-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.9.____cpythontarget_platformwin-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6529&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/conda-package-handling-feedstock?branchName=master&jobName=win&configuration=win_64_python3.9.____cpythontarget_platformwin-64" alt="variant">
                 </a>
               </td>
             </tr>
