@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.2" %}
 
 package:
   name: {{ name }}
@@ -7,17 +7,17 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: aa8719b23d5064182aed3f15a27879ca6fd4c1a8bb7f2048b26d2ae425288bd8
+  sha256: 1d68ca635a159d0cf8aa1247375a23cfaf37de86518f1aebdbfe96be1d9598b3
 
 build:
-  number: 6
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
   # HACK: case-sensitive mismatch in latest conda-build
   missing_dso_whitelist:
-    - "*/VCRUNTIME140.dll"   # [win]
-    - "MSVCR90.dll"   # [win]
+    - '*/VCRUNTIME140.dll'   # [win]
+    - MSVCR90.dll     # [win]
 
 requirements:
   build:
