@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "1.7.2" %}
+{% set version = "1.7.3" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: 1d68ca635a159d0cf8aa1247375a23cfaf37de86518f1aebdbfe96be1d9598b3
+  sha256: 2a7cc4dc892d3581764710e869d36088291de86c7ebe0375c830a2910ef54bb6
 
 build:
   number: 0
@@ -70,3 +70,4 @@ extra:
   recipe-maintainers:
     - msarahan
     - beckermr
+    - dbast
