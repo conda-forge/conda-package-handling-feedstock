@@ -324,5 +324,6 @@ Feedstock Maintainers
 =====================
 
 * [@beckermr](https://github.com/beckermr/)
+* [@dbast](https://github.com/dbast/)
 * [@msarahan](https://github.com/msarahan/)
 
