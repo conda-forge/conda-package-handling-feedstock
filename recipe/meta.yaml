@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: 2a7cc4dc892d3581764710e869d36088291de86c7ebe0375c830a2910ef54bb6
+  sha256: 6c01527200c9d9de18e64d2006cc97f9813707a34f3cb55bca2852ff4b06fb8d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
