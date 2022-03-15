@@ -32,7 +32,7 @@ requirements:
     - _libarchive_static_for_cph
     - msinttypes  # [win and vc<14]
   run:
-    - futures   # [py27]
+    - futures   # [py==27]
     - python
     - six
     - tqdm
