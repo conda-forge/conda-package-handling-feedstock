@@ -62,7 +62,7 @@ about:
     - static_deps_licenses/libarchive.txt
     - static_deps_licenses/zlib.txt
     - static_deps_licenses/zstd.txt
-    - static_deps_licenses/msinttypes.txt  # [win and py27]
+    - static_deps_licenses/msinttypes.txt  # [win and py==27]
     - static_deps_licenses/libiconv.txt    # [osx]
   summary: Create and extract conda packages of various formats
 
