@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: 0423c6dcb384e7ce369e72311cbd0ba9d57d52055f809bfc5b1c6602a05731b3
+  sha256: 22d89206f55616b774a775038a6777b0d2e9b8706c23068c4d3091f114c8a4e8
 
 build:
   number: 0
