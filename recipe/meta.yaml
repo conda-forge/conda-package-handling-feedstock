@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "1.8.1" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: 22d89206f55616b774a775038a6777b0d2e9b8706c23068c4d3091f114c8a4e8
+  sha256: 81e0771b8b10ab5c20678a5da714e36d97e321acfc3e5b304ec2e650ce84734b
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
@@ -32,9 +32,7 @@ requirements:
     - _libarchive_static_for_cph
     - msinttypes  # [win and vc<14]
   run:
-    - futures   # [py==27]
     - python
-    - six
     - tqdm
 
 test:
@@ -71,3 +69,4 @@ extra:
     - msarahan
     - beckermr
     - dbast
+    - jezdez
