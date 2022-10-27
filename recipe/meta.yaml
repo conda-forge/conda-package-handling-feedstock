@@ -10,7 +10,7 @@ source:
   sha256: 81e0771b8b10ab5c20678a5da714e36d97e321acfc3e5b304ec2e650ce84734b
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
