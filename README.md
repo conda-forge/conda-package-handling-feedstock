@@ -9,6 +9,10 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-package-h
 
 Summary: Create and extract conda packages of various formats
 
+Development: https://github.com/conda/conda-package-handling
+
+Documentation: https://conda.github.io/conda-package-handling/
+
 Current build status
 ====================
 
@@ -395,6 +399,7 @@ Feedstock Maintainers
 
 * [@beckermr](https://github.com/beckermr/)
 * [@dbast](https://github.com/dbast/)
+* [@dholth](https://github.com/dholth/)
 * [@jezdez](https://github.com/jezdez/)
 * [@msarahan](https://github.com/msarahan/)
 
