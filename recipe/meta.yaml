@@ -14,15 +14,17 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
-  #noarch: python
+  # noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    # - python >=3.7
+    - python
     - pip
     - wheel
   run:
-    - python >=3.7
+    # - python >=3.7
+    - python
     - conda-package-streaming >=0.6.1
 
 test:
