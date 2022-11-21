@@ -17,6 +17,8 @@ build:
   # noarch: python
 
 requirements:
+  build:
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     # - python >=3.7
     - python
