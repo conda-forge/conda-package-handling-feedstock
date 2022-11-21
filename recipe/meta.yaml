@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "1.9.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: 81e0771b8b10ab5c20678a5da714e36d97e321acfc3e5b304ec2e650ce84734b
+  sha256: c6b69922a950f858bea20d7ce6861f27d1bb46f15054cf274738d8007a97b049
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
