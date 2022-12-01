@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: c6b69922a950f858bea20d7ce6861f27d1bb46f15054cf274738d8007a97b049
+  sha256: ec0a2c51f442d98b935ee2288beb1ec6c7e25020b5961f8d09f35738b276b532
 
 build:
   number: 0
