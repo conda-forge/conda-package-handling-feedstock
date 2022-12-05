@@ -55,8 +55,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - conda-forge/conda
-    - conda-forge/conda-build
     - beckermr
     - dbast
     - dholth
