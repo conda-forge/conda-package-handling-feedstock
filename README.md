@@ -1,11 +1,11 @@
-About conda-package-handling
-============================
+About conda-package-handling-feedstock
+======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-package-handling-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/conda/conda-package-handling
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-package-handling-feedstock/blob/main/LICENSE.txt)
 
 Summary: Create and extract conda packages of various formats
 
