@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "2.0.2" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: ec0a2c51f442d98b935ee2288beb1ec6c7e25020b5961f8d09f35738b276b532
+  sha256: dae0c697cf8757d997d0d7f4fbe48a5516cb17f16b3715dadb6008ade8ef850e
 
 build:
   number: 0
@@ -27,7 +27,8 @@ requirements:
   run:
     - python >=3.7
     - python
-    - conda-package-streaming >=0.7.0
+    - conda-package-streaming >=0.9.0
+    - zstandard >=0.15
 
 test:
   source_files:
