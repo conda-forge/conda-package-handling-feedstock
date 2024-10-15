@@ -23,7 +23,7 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - wheel
+    - setuptools >=70.1.0
   run:
     - python >=3.8
     - python
