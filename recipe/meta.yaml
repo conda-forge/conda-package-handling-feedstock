@@ -34,10 +34,11 @@ test:
   source_files:
     - tests
   requires:
-    - mock
-    - pytest
-    - pytest-cov
-    - pytest-mock
+     - mock
+     - bottle
+     - pytest
+     - pytest-cov
+     - pytest-mock
   imports:
     - conda_package_handling
     - conda_package_handling.api
