@@ -10,7 +10,7 @@ source:
   sha256: a68d23d795704f1b687559b89c98e73d0dbebcab077592c60bffc1dc408b72e9
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
@@ -21,11 +21,11 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=70.1.0
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - python
     - conda-package-streaming >=0.9.0
     - zstandard >=0.15
@@ -40,6 +40,7 @@ test:
      - pytest-cov
      - pytest-mock
      - requests
+     - python {{ python_min }}
   imports:
     - conda_package_handling
     - conda_package_handling.api
