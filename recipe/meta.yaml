@@ -1,5 +1,5 @@
 {% set name = "conda-package-handling" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/{{ version }}.tar.gz
-  sha256: a68d23d795704f1b687559b89c98e73d0dbebcab077592c60bffc1dc408b72e9
+  sha256: fb471058fc5cc3a1ab5c802492d080d4d6a3eb221ce3e9852380ca2d021f1b95
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - cph = conda_package_handling.cli:main
@@ -35,13 +35,13 @@ test:
   source_files:
     - tests
   requires:
-     - mock
-     - bottle
-     - pytest
-     - pytest-cov
-     - pytest-mock
-     - requests
-     - python {{ python_min }}
+    - mock
+    - bottle
+    - pytest
+    - pytest-cov
+    - pytest-mock
+    - requests
+    - python {{ python_min }}
   imports:
     - conda_package_handling
     - conda_package_handling.api
