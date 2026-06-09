@@ -22,7 +22,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - flit-core >=3.2,<4
   run:
@@ -37,7 +37,7 @@ tests:
         - conda_package_handling
         - conda_package_handling.api
       pip_check: false
-      python_version: ${{ python_min }}
+      python_version: ${{ python_min }}.*
   - files:
       source:
         - tests
@@ -49,7 +49,7 @@ tests:
         - pytest-cov
         - pytest-mock
         - requests
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - pytest -v --cov=conda_package_handling --color=yes tests/
 
