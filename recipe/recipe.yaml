@@ -1,0 +1,72 @@
+schema_version: 1
+
+context:
+  name: conda-package-handling
+  version: "2.5.0"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/conda/conda-package-handling/archive/${{ version }}.tar.gz
+  sha256: fb471058fc5cc3a1ab5c802492d080d4d6a3eb221ce3e9852380ca2d021f1b95
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - cph = conda_package_handling.cli:main
+
+requirements:
+  host:
+    - python ${{ python_min }}
+    - pip
+    - flit-core >=3.2,<4
+  run:
+    - python >=${{ python_min }}
+    - conda-package-streaming >=0.12.0
+    - requests
+    - zstandard >=0.15
+
+tests:
+  - python:
+      imports:
+        - conda_package_handling
+        - conda_package_handling.api
+      pip_check: false
+      python_version: ${{ python_min }}
+  - files:
+      source:
+        - tests
+    requirements:
+      run:
+        - mock
+        - bottle
+        - pytest
+        - pytest-cov
+        - pytest-mock
+        - requests
+        - python ${{ python_min }}
+    script:
+      - pytest -v --cov=conda_package_handling --color=yes tests/
+
+about:
+  license: BSD-3-Clause
+  license_file:
+    - LICENSE
+  summary: Create and extract conda packages of various formats
+  homepage: https://github.com/conda/conda-package-handling
+  repository: https://github.com/conda/conda-package-handling
+  documentation: https://conda.github.io/conda-package-handling/
+
+extra:
+  recipe-maintainers:
+    - beckermr
+    - dbast
+    - dholth
+    - jezdez
+    - msarahan
+
