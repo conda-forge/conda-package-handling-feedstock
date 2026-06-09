@@ -20,7 +20,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools >=70.1.0
+    - flit-core >=3.2,<4
   run:
     - python >={{ python_min }}
     - conda-package-streaming >=0.12.0
