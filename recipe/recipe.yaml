@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: conda-package-handling
-  version: "2.5.0"
+  version: "2.6.0"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-package-handling/archive/${{ version }}.tar.gz
-  sha256: fb471058fc5cc3a1ab5c802492d080d4d6a3eb221ce3e9852380ca2d021f1b95
+  sha256: 348d1a92412c1d57c14fea0c6bc7f3c3223959020533b6a03bcce11303aaa798
 
 build:
   number: 0
@@ -27,9 +27,9 @@ requirements:
     - flit-core >=3.2,<4
   run:
     - python >=${{ python_min }}
-    - conda-package-streaming >=0.12.0
+    - conda-package-streaming >=0.13.0
+    - backports.zstd >=1.1.0
     - requests
-    - zstandard >=0.15
 
 tests:
   - python:
@@ -37,7 +37,9 @@ tests:
         - conda_package_handling
         - conda_package_handling.api
       pip_check: false
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - files:
       source:
         - tests
